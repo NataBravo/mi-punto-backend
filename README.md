@@ -84,7 +84,7 @@ En desarrollo bajo metodología Scrum, organizado por sprints y gestionado media
 ## 👥 Equipo de desarrollo
 
 * Natalia Bravo
-* Juan Camilo
+* Juan Camilo Campo
 
 ---
 
