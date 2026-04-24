@@ -29,6 +29,7 @@ Esto permite una separación clara de responsabilidades y facilita la evolución
 
 ## 📁 Estructura del proyecto
 
+```
 app/
 │
 ├── modules/        # Módulos del sistema (auth, business, reviews)
@@ -37,7 +38,9 @@ app/
 │
 └── database/       # Configuración de base de datos
 
+```
 ---
+
 
 ## ⚙️ Instalación y ejecución
 
