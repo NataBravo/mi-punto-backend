@@ -1,7 +1,25 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.core.database import SessionLocal
+from app.modules.auth.service import AuthService
+from app.modules.auth.schemas import UserCreate, UserLogin
 
-router = APIRouter()
+router = APIRouter(prefix="/auth", tags=["Auth"])
 
-@router.get("/auth")
-def test_auth():
-    return {"message": "Auth funcionando"}
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+@router.post("/register")
+def register(user: UserCreate, db: Session = Depends(get_db)):
+    return AuthService(db).register(user)
+
+
+@router.post("/login")
+def login(user: UserLogin, db: Session = Depends(get_db)):
+    return AuthService(db).login(user)

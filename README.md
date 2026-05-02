@@ -78,7 +78,7 @@ Actualmente se configura con SQLite para desarrollo, pero puede escalarse fácil
 ### 1. Clonar el repositorio
 
 ```
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/NataBravo/mi-punto-backend.git
 cd mi-punto-backend
 ```
 
